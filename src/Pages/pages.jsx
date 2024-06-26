@@ -27,7 +27,7 @@ function Pages() {
           <Route path="/aboutus/noticeBoard" element={<NoticeBoard />} />
           <Route path="/aboutus/developers" element={<Developers />} />
           <Route path="/aboutus/contactUs" element={<ContactUs />} />
-          <Route path="/Awards/alumniAwards" element={<AlumniAwards />} />
+          <Route path="/awards/alumniAwards" element={<AlumniAwards />} />
           <Route path="/events/latestEvents" element={<LatestEvents />} />
           <Route path="/events/reunions" element={<Reunions />} />
           <Route path="/events/chapters" element={<Chapters />} />
