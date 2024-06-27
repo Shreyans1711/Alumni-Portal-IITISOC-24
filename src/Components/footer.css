@@ -6,17 +6,9 @@
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 0.75px;
 }
-<<<<<<< HEAD
 .photoAlum {
   width: 100px;
   height: 100px;
   background-image: url("../assets/AlumniCellLogo.jpeg");
   background-size: cover;
-=======
-.photoAlum{
-    width:100px;
-    height: 100px;
-    background-image:url("../assets/AlumniCellLogo.jpeg");
-    background-size: cover;
->>>>>>> cd5dbe295343a0c06f96553d5899db5ecd9bff38
 }
