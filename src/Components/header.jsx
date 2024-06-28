@@ -98,6 +98,20 @@ function Header() {
               <li>
                 <a
                   class="dropdown-item text-xl text-black bg-white"
+                  href="/aboutus/MessageFromDirector">
+                  Director's Message
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-xl text-black bg-white"
+                  href="/aboutus/MessageFromDeanACR">
+                   Message from Dean ACR
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/aboutus/developers">
                   Developers
                 </a>
