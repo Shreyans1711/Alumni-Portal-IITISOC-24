@@ -37,8 +37,8 @@ function Developers() {
       <div className="header top-0 w-full">
         <Header />
       </div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold font-serif text-white font-outline-2 mt-3">
-        Developers of the Website
+      <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold font-serif text-white font-outline-2 mt-3 pt-4">
+        Website developers
       </h1>
       <div className="flex flex-wrap justify-center gap-[200px] mt-5 px-4">
         {Info.map((info, index) => (
