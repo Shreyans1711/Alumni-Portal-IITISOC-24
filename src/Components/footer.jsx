@@ -4,35 +4,35 @@ const Footer = () => {
   return (
     <>
       <div className="position:absolute bg-[#0096C7] px-10 py-6 pb-4 flex flex-col text-center text-black font-bold texts text-xl  sm:flex-row sm:justify-between sm:content-center sm:text-left">
-        <div className="sm:flex">
-          <div className="pl-[40%] sm:p-1">
+        <div className="sm:flex bg-[#0096C7]">
+          <div className="pl-[40%] sm:p-1 bg-[#0096C7]">
             <div className="photoAlum"></div>
           </div>
-          <div className="mt-3">
-            <div className="AlumniText drop-shadow-xl text-3xl headLines">
+          <div className="mt-3 bg-[#0096C7]">
+            <div className="AlumniText text-3xl headLines bg-[#0096C7]">
               Alumni Association
             </div>
-            <div className="collegeName">
+            <div className="collegeName bg-[#0096C7]">
               Indian Institute of Technology Indore
             </div>
           </div>
         </div>
-        <div className="quickLinks">
+        <div className="quickLinks bg-[#0096C7]">
           <ul>
-            <li className="text-3xl headLines">Quick Links</li>
-            <li>IIT INDORE</li>
-            <li>Student Gymkhana</li>
-            <li>Director</li>
+            <li className="text-3xl headLines bg-[#0096C7]">Quick Links</li>
+            <li className="bg-[#0096C7]">IIT INDORE</li>
+            <li className="bg-[#0096C7]">Student Gymkhana</li>
+            <li className="bg-[#0096C7]">Director</li>
           </ul>
         </div>
         <div className="ContactUs">
           <ul>
-            <li className="text-3xl headLines">Contact Us</li>
-            <li>Phone:+91 1234567890</li>
-            <li>Email: alumnicell@iiti.ac.in</li>
-            <li className="flex justify-center pt-1 hover:cursor-pointer">
+            <li className="text-3xl headLines bg-[#0096C7]">Contact Us</li>
+            <li className="bg-[#0096C7]">Phone:+91 1234567890</li>
+            <li className="bg-[#0096C7]">Email: alumnicell@iiti.ac.in</li>
+            <li className="flex justify-center pt-1 hover:cursor-pointer bg-[#0096C7]">
               <svg
-                className="w-7 h-7 rounded-2xl"
+                className="w-7 h-7 rounded-2xl bg-[#0096C7]"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="24"

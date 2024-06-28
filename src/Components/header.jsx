@@ -32,10 +32,10 @@ function Header() {
           </a>
         </div>
         <div>
-          <div className="font-bold text-4xl text-white text-center font-outline-1">
+          <div className="font-bold text-4xl text-white text-center font-outline-1 bg-[#0096C7]">
             Alumni Portal
           </div>
-          <div className="font-bold text-white text-2xl text-center font-outline-1">
+          <div className="font-bold text-white text-2xl text-center font-outline-1 bg-[#0096C7]">
             Indian Institute of Technology Indore
           </div>
         </div>
@@ -79,9 +79,9 @@ function Header() {
       )}
       {toggle && (
         <div className="bg-[#023E8A] p-1 md:flex justify-around">
-          <div class="dropdown">
+          <div class="dropdown bg-[#023E8A]">
             <button
-              class="text-2xl text-white font-bold font-outline-1 btn dropdown-toggle"
+              class="text-2xl text-white font-bold font-outline-1 btn dropdown-toggle bg-[#023E8A]"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -90,28 +90,28 @@ function Header() {
             <ul class="dropdown-menu">
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/aboutus/IITIAumniAssociation">
                   IITI Alumni Association
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/aboutus/developers">
                   Developers
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/aboutus/OurTeam">
                   Our Team
                 </a>
               </li>
             </ul>
           </div>
-          <div class="dropdown">
+          <div class="dropdown bg-[#023E8A]">
             <button
               class="text-2xl text-white font-bold font-outline-1 btn dropdown-toggle"
               type="button"
@@ -122,28 +122,28 @@ function Header() {
             <ul class="dropdown-menu">
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/events/latestevents">
                   Latest Events
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/events/reunions">
                   Reunions
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/events/chapters">
                   Chapters
                 </a>
               </li>
             </ul>
           </div>
-          <div class="dropdown">
+          <div class="dropdown bg-[#023E8A]">
             <button
               class="text-2xl text-white font-bold font-outline-1 btn dropdown-toggle"
               type="button"
@@ -154,28 +154,28 @@ function Header() {
             <ul class="dropdown-menu">
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/updates/alumninews">
                   Alumni News
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/updates/newsletter">
                   Newsletter
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/updates/noticeboard">
                   NoticeBoard
                 </a>
               </li>
             </ul>
           </div>
-          <div class="dropdown">
+          <div class="dropdown bg-[#023E8A]">
             <button
               class="text-2xl text-white font-bold font-outline-1 btn dropdown-toggle"
               type="button"
@@ -186,14 +186,14 @@ function Header() {
             <ul class="dropdown-menu">
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white" 
                   href="/awards/alumniawards">
                   Alumni Awards
                 </a>
               </li>
             </ul>
           </div>
-          <div class="dropdown">
+          <div class="dropdown bg-[#023E8A]">
             <button
               class="text-2xl text-white font-bold font-outline-1 btn dropdown-toggle"
               type="button"
@@ -204,21 +204,21 @@ function Header() {
             <ul class="dropdown-menu">
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/mentorship/chatWithMentor">
                   Chat with mentor
                 </a>
               </li>
               <li>
                 <a
-                  class="dropdown-item text-xl text-black"
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/mentorship/jobs">
                   Jobs
                 </a>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="bg-[#023E8A]">
             <button
               class="text-2xl text-white font-bold font-outline-1 btn"
               type="button"
@@ -231,12 +231,12 @@ function Header() {
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item text-xl text-black" href="#">
+                <a class="dropdown-item text-xl text-black bg-white" href="#">
                   profile
                 </a>
               </li>
               <li>
-                <button class="dropdown-item text-xl text-black">logout</button>
+                <button class="dropdown-item text-xl text-black bg-white">logout</button>
               </li>
             </ul>
           </div>
