@@ -112,15 +112,15 @@ function Header() {
               <li>
                 <a
                   class="dropdown-item text-xl text-black bg-white"
-                  href="/aboutus/developers">
-                  Developers
+                  href="/aboutus/OurTeam">
+                  Our Team
                 </a>
               </li>
               <li>
                 <a
                   class="dropdown-item text-xl text-black bg-white"
-                  href="/aboutus/OurTeam">
-                  Our Team
+                  href="/aboutus/developers">
+                  Developers
                 </a>
               </li>
             </ul>
