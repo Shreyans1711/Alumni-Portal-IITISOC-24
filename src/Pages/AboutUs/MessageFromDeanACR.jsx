@@ -13,7 +13,7 @@ const MessageFromDeanACR = () => {
         <div className="outer flex justify-center m-4 sm:m-6 md:m-10">
             <div className="message w-full max-w-screen-lg h-full min-h-screen bg-white rounded-3xl p-4 sm:p-6 md:p-10">
             <div>
-                <a className='flex justify-center' href="https://www.iiti.ac.in/director#:~:text=Dr.,%2C%20at%20IIT%20Bombay%2C%20Dr.">
+                <a className='flex justify-center' href="https://iiti.irins.org/profile/62102" target='_blank'>
                     <img className='w-[40%] h-[50%] rounded-full bg-white' src={DeanACR}alt=""/>
                 </a>
             </div>
