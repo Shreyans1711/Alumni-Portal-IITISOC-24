@@ -29,7 +29,7 @@ const Footer = () => {
           <ul>
             <li className="text-3xl headLines">Contact Us</li>
             <li>Phone:+91 1234567890</li>
-            <li>Email: xyz@iiti.ac.in</li>
+            <li>Email: alumnicell@iiti.ac.in</li>
             <li className="flex justify-center pt-1 hover:cursor-pointer">
               <svg
                 className="w-7 h-7 rounded-2xl"

@@ -4,13 +4,13 @@ import Footer from "../../Components/footer";
 function Home() {
   return (
     <>
-      <body className="bg-[#ADE8F4]">
+      <div className="header top-0">
         <Header />
-        <h1 class="text-5xl mb-2">This is home page</h1>
-        <div className="footer absolute bottom-0">
-          <Footer />
-        </div>
-      </body>
+      </div>
+      <h1 class="text-5xl">This is home page</h1>
+      <div className="footer absolute bottom-0">
+        <Footer />
+      </div>
     </>
   );
 }

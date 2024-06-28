@@ -98,13 +98,6 @@ function Header() {
               <li>
                 <a
                   class="dropdown-item text-xl text-black"
-                  href="/aboutus/noticeboard">
-                  NoticeBoard
-                </a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item text-xl text-black"
                   href="/aboutus/developers">
                   Developers
                 </a>
@@ -112,8 +105,8 @@ function Header() {
               <li>
                 <a
                   class="dropdown-item text-xl text-black"
-                  href="/aboutus/ContactUs">
-                  Contact Us
+                  href="/aboutus/OurTeam">
+                  Our Team
                 </a>
               </li>
             </ul>
@@ -171,6 +164,13 @@ function Header() {
                   class="dropdown-item text-xl text-black"
                   href="/updates/newsletter">
                   Newsletter
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-xl text-black"
+                  href="/updates/noticeboard">
+                  NoticeBoard
                 </a>
               </li>
             </ul>
