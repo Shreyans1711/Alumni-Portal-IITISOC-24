@@ -4,7 +4,7 @@ import IITIAlumniAssociaton from "./AboutUs/IITIAlumniAssociation";
 import NoticeBoard from "./Updates/noticeBoard";
 import Developers from "./AboutUs/developers";
 import OurTeam from "./AboutUs/OurTeam";
-import LatestEvents from "./Events/latestEvents";
+import LatestEvents from "./Events/LatestEvents/latestEvents";
 import Reunions from "./Events/reunions";
 import Chapters from "./Events/chapters";
 import ChatWithMentor from "./Mentorship/chatWithMentor";
@@ -25,7 +25,7 @@ function Pages() {
             element={<IITIAlumniAssociaton />}
           />
           <Route path="/aboutus/developers" element={<Developers />} />
-          <Route path="/aboutus/OurTeam" element={<OurTeam/>} />
+          <Route path="/aboutus/OurTeam" element={<OurTeam />} />
           <Route path="/awards/alumniAwards" element={<AlumniAwards />} />
           <Route path="/events/latestEvents" element={<LatestEvents />} />
           <Route path="/events/reunions" element={<Reunions />} />
