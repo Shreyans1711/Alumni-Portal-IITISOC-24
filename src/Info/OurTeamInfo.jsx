@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const OurTeamInfo = (props) => {
   return (
     <div>
-    <div className=" m-5 w-[80%] h-auto bg-white rounded-lg p-1 flex flex-col justify-center">
+      <div className=" m-3 w-[80%] h-auto bg-white rounded-lg p-3 flex flex-col justify-center">
         <div className="flex">
           <div>
             <img
@@ -23,7 +23,7 @@ const OurTeamInfo = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurTeamInfo
+export default OurTeamInfo;
