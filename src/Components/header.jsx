@@ -186,7 +186,7 @@ function Header() {
             <ul class="dropdown-menu">
               <li>
                 <a
-                  class="dropdown-item text-xl text-black bg-white" 
+                  class="dropdown-item text-xl text-black bg-white"
                   href="/awards/alumniawards">
                   Alumni Awards
                 </a>
@@ -236,7 +236,9 @@ function Header() {
                 </a>
               </li>
               <li>
-                <button class="dropdown-item text-xl text-black bg-white">logout</button>
+                <button class="dropdown-item text-xl text-black bg-white">
+                  logout
+                </button>
               </li>
             </ul>
           </div>
