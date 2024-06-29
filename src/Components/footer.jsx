@@ -3,35 +3,38 @@ import "./Components-Styles/footer.css";
 const Footer = () => {
   return (
     <body className="bg-[#0096C7]">
-      <div className="position:absolute  px-10 py-6 pb-4 flex flex-col text-center text-black font-bold texts text-xl  sm:flex-row sm:justify-between sm:content-center sm:text-left">
+      <div className="position:absolute  px-10 py-6 pb-4 flex flex-col text-center font-bold text-xl  sm:flex-row sm:justify-between sm:content-center sm:text-left">
         <div className="sm:flex ">
           <div className="pl-[40%] sm:p-1 ">
-            <div className="photoAlum"></div>
+            <a href="/"><div className="photoAlum"></div></a>
           </div>
           <div className="mt-3 ">
-            <div className="AlumniText text-3xl headLines ">
+            <div className="AlumniText font-bold text-4xl text-white text-center font-outline-1 ">
               Alumni Association
             </div>
-            <div className="collegeName ">
+            <div className="collegeName font-bold text-xl text-white text-center font-outline-1">
               Indian Institute of Technology Indore
             </div>
           </div>
         </div>
         <div className="quickLinks ">
           <ul>
-            <li className="text-3xl headLines ">Quick Links</li>
-            <li className="">IIT INDORE</li>
-            <li className="">Student Gymkhana</li>
-            <li className="">Director</li>
+            <li className="font-bold text-4xl text-white text-center font-outline-1 pb-3">Quick Links</li>
+            <li className=""><a href="https://www.iiti.ac.in/" className="no-underline font-bold text-xl text-white text-center font-outline-1">IIT INDORE</a></li>
+            <li className=""><a href="https://gymkhana.iiti.ac.in/" className="no-underline font-bold text-xl text-white text-center font-outline-1">Student Gymkhana</a></li>
+            <li className=""><a href="https://www.iiti.ac.in/director#:~:text=Dr.,%2C%20at%20IIT%20Bombay%2C%20Dr." className="no-underline font-bold text-xl text-white text-center font-outline-1">Director</a></li>
           </ul>
         </div>
         <div className="ContactUs">
           <ul>
-            <li className="text-3xl headLines ">Contact Us</li>
-            <li className="">Phone:+91 1234567890</li>
-            <li className="">Email: alumnicell@iiti.ac.in</li>
+            <li className="font-bold text-4xl text-white text-center font-outline-1 pb-3">Contact Us</li>
+            <li className="font-bold text-xl text-white text-center font-outline-1">Phone:+91 1234567890</li>
+            <li className="font-bold text-xl text-white text-center font-outline-1">Email: alumnicell@iiti.ac.in</li>
             <li className="flex justify-center pt-1 hover:cursor-pointer ">
               <svg
+              onClick={()=>{
+                window.open("https://www.instagram.com/alumni_cell_iiti/","_blank")
+              }}
                 className="w-7 h-7 rounded-2xl "
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -63,7 +66,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="actualFooter w-[100vw] h-[40px] bg-[#023E8A] font-bold text-sm flex justify-center items-center texts sm:text-2xl">
+      <div className="actualFooter w-[100vw] h-[40px] bg-[#023E8A] font-bold text-sm flex justify-center items-center texts sm:text-2xl text-white text-center font-outline-1">
         Alumni Cell - IIT Indore @2024. All Rights Reserved
       </div>
     </body>

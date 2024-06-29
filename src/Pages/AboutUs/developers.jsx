@@ -25,14 +25,14 @@ function Developers() {
       name: "Akarshit Trivedi",
       year: "2022-2026",
       dept: "MEMS",
-      link: "https://www.linkedin.com/in/aditya-sonkusare-054175260/",
+      link: "https://www.linkedin.com/in/akarshit-trivedi-529243287/",
     },
     {
       photo: boy,
       name: "Aditya Sonkhusre",
       year: "2022-2026",
       dept: "MEMS",
-      link: "https://www.linkedin.com/in/akarshit-trivedi-529243287/",
+      link: "https://www.linkedin.com/in/aditya-sonkusare-054175260/",
     },
   ];
 
