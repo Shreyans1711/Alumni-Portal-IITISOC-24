@@ -11,24 +11,28 @@ function Developers() {
       name: "Shreyans Kothari",
       year: "2022-2026",
       dept: "MEMS",
+      link: "https://www.linkedin.com/in/shreyans-kothari-3a80a722a/",
     },
     {
       photo: boy,
       name: "Abhishek AP",
       year: "2022-2026",
       dept: "MEMS",
+      link: "https://www.linkedin.com/in/abhishek-a-p-66104425b/",
     },
     {
       photo: boy,
       name: "Akarshit Trivedi",
       year: "2022-2026",
       dept: "MEMS",
+      link: "https://www.linkedin.com/in/aditya-sonkusare-054175260/",
     },
     {
       photo: boy,
       name: "Aditya Sonkhusre",
       year: "2022-2026",
       dept: "MEMS",
+      link: "https://www.linkedin.com/in/akarshit-trivedi-529243287/",
     },
   ];
 
@@ -42,10 +46,7 @@ function Developers() {
       </h1>
       <div className="flex flex-wrap justify-center gap-[200px] mt-5 px-4">
         {Info.map((info, index) => (
-          <div
-            key={index}
-            className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 p-2 flex flex-col items-center"
-          >
+          <div key={index} className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 p-2 flex flex-col items-center">
             <DevelopersInfo {...info} />
           </div>
         ))}

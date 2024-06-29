@@ -1,8 +1,13 @@
 import React from "react";
+
+const handleClick = (link) => {
+  window.open(link, "_blank");
+};
+
 function AlumniInfo(props) {
   return (
     <>
-      <div className=" m-4 w-[400px] h-auto bg-white rounded-lg p-4 flex flex-col justify-center">
+      <div onClick={() => handleClick(props.link)} className="cursor-pointer m-4 w-[400px] h-auto bg-white rounded-lg p-4 flex flex-col justify-center">
         <div className="flex">
           <div>
             <img
@@ -16,9 +21,9 @@ function AlumniInfo(props) {
             />
           </div>
           <div className="font-semibold font-serif bg-[#39bdcb] text-center text-white flex-col content-center p-2 rounded-r-lg">
-            <div>Name:{props.name}</div>
-            <div>Year:{props.year}</div>
-            <div>Dept:{props.dept}</div>
+            <div>Name: {props.name}</div>
+            <div>Year: {props.year}</div>
+            <div>Dept: {props.dept}</div>
           </div>
         </div>
       </div>
