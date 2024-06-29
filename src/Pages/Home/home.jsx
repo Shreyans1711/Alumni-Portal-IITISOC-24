@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../Components/header";
 import Footer from "../../Components/footer";
-import Login from "../../Components/login";
 
 function Home() {
   const [data, setData] = React.useState(null);
@@ -18,7 +17,6 @@ function Home() {
 
   return (
     <>
-      <Login />
       <div className="header top-0">
         <Header />
       </div>
