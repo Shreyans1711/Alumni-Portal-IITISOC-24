@@ -98,8 +98,15 @@ function Header() {
               <li>
                 <a
                   class="dropdown-item text-xl text-black bg-white"
-                  href="/aboutus/developers">
-                  Developers
+                  href="/aboutus/MessageFromDirector">
+                  Director's Message
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-xl text-black bg-white"
+                  href="/aboutus/MessageFromDeanACR">
+                   Message from Dean ACR
                 </a>
               </li>
               <li>
@@ -107,6 +114,13 @@ function Header() {
                   class="dropdown-item text-xl text-black bg-white"
                   href="/aboutus/OurTeam">
                   Our Team
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-xl text-black bg-white"
+                  href="/aboutus/developers">
+                  Website Developers
                 </a>
               </li>
             </ul>

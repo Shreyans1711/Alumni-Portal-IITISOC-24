@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./Home/home";
 import IITIAlumniAssociaton from "./AboutUs/IITIAlumniAssociation";
+import MessageFromDirector from "./AboutUs/MessageFromDirector";
+import MessageFromDeanACR from "./AboutUs/MessageFromDeanACR";
 import NoticeBoard from "./Updates/noticeBoard";
 import Developers from "./AboutUs/developers";
 import OurTeam from "./AboutUs/OurTeam";
@@ -26,6 +28,8 @@ function Pages() {
           />
           <Route path="/aboutus/developers" element={<Developers />} />
           <Route path="/aboutus/OurTeam" element={<OurTeam />} />
+          <Route path="/aboutus/MessageFromDirector" element={<MessageFromDirector />} />
+          <Route path="/aboutus/MessageFromDeanACR" element={<MessageFromDeanACR />} />
           <Route path="/awards/alumniAwards" element={<AlumniAwards />} />
           <Route path="/events/latestEvents" element={<LatestEvents />} />
           <Route path="/events/reunions" element={<Reunions />} />

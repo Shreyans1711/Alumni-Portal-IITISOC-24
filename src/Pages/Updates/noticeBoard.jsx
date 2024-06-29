@@ -8,8 +8,8 @@ function NoticeBoard() {
         <Header/>
       </div>
       <h1 class="text-5xl">This is the Noticeboard page</h1>
-      <div className="footer absolute bottom-0">
-        <Footer/>
+      <div className="footer w-full mt-10">
+        <Footer />
       </div>
     </>
   );
