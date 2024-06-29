@@ -3,7 +3,6 @@ import ACLogo from "../assets/AlumniCellLogo.jpeg";
 import iitilogo from "../assets/iitilogo.png";
 import profilelogo from "../assets/profilelogo.jpg";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
-import styles from "../Styles/header.module.css";
 
 function Header() {
   const [toggle, setToggle] = useState(true);

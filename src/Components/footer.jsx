@@ -1,44 +1,45 @@
 import React from "react";
-import "./footer.css";
+import "./Components-Styles/footer.css";
 const Footer = () => {
   return (
-    <>
-      <div className="position:absolute bg-[#0096C7] px-10 py-6 pb-4 flex flex-col text-center text-black font-bold texts text-xl  sm:flex-row sm:justify-between sm:content-center sm:text-left">
-        <div className="sm:flex bg-[#0096C7]">
-          <div className="pl-[40%] sm:p-1 bg-[#0096C7]">
+    <body className="bg-[#0096C7]">
+      <div className="position:absolute  px-10 py-6 pb-4 flex flex-col text-center text-black font-bold texts text-xl  sm:flex-row sm:justify-between sm:content-center sm:text-left">
+        <div className="sm:flex ">
+          <div className="pl-[40%] sm:p-1 ">
             <div className="photoAlum"></div>
           </div>
-          <div className="mt-3 bg-[#0096C7]">
-            <div className="AlumniText text-3xl headLines bg-[#0096C7]">
+          <div className="mt-3 ">
+            <div className="AlumniText text-3xl headLines ">
               Alumni Association
             </div>
-            <div className="collegeName bg-[#0096C7]">
+            <div className="collegeName ">
               Indian Institute of Technology Indore
             </div>
           </div>
         </div>
-        <div className="quickLinks bg-[#0096C7]">
+        <div className="quickLinks ">
           <ul>
-            <li className="text-3xl headLines bg-[#0096C7]">Quick Links</li>
-            <li className="bg-[#0096C7]">IIT INDORE</li>
-            <li className="bg-[#0096C7]">Student Gymkhana</li>
-            <li className="bg-[#0096C7]">Director</li>
+            <li className="text-3xl headLines ">Quick Links</li>
+            <li className="">IIT INDORE</li>
+            <li className="">Student Gymkhana</li>
+            <li className="">Director</li>
           </ul>
         </div>
         <div className="ContactUs">
           <ul>
-            <li className="text-3xl headLines bg-[#0096C7]">Contact Us</li>
-            <li className="bg-[#0096C7]">Phone:+91 1234567890</li>
-            <li className="bg-[#0096C7]">Email: alumnicell@iiti.ac.in</li>
-            <li className="flex justify-center pt-1 hover:cursor-pointer bg-[#0096C7]">
+            <li className="text-3xl headLines ">Contact Us</li>
+            <li className="">Phone:+91 1234567890</li>
+            <li className="">Email: alumnicell@iiti.ac.in</li>
+            <li className="flex justify-center pt-1 hover:cursor-pointer ">
               <svg
-                className="w-7 h-7 rounded-2xl bg-[#0096C7]"
+                className="w-7 h-7 rounded-2xl "
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
                 color="#000000"
-                fill="none">
+                fill="none"
+              >
                 <path
                   d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
                   stroke="white"
@@ -65,7 +66,7 @@ const Footer = () => {
       <div className="actualFooter w-[100vw] h-[40px] bg-[#023E8A] font-bold text-sm flex justify-center items-center texts sm:text-2xl">
         Alumni Cell - IIT Indore @2024. All Rights Reserved
       </div>
-    </>
+    </body>
   );
 };
 
