@@ -8,9 +8,11 @@ function Jobs() {
       <div className="header top-0">
         <Header />
       </div>
-      <h1 class="text-5xl text-center m-10">Jobs & Career opportunities</h1>
+      <h1 class=" m-3 text-5xl text-center font-bold font-serif text-white font-outline-2">
+        Jobs and Career Opportunities
+      </h1>
       <div className="outer flex justify-center">
-        <div className="inner bg-[#D9D9D9] w-[90%] h-[100%] flex-col p-5 rounded-3xl">
+        <div className="inner bg-[#D9D9D9]  flex-col m-5 p-3 rounded-lg">
           <Jobinfo />
           <Jobinfo />
           <Jobinfo />

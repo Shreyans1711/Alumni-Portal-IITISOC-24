@@ -2,8 +2,9 @@ import React from "react";
 
 const jobInfo = () => {
   return (
-    <div className="bg-[#F3A5A5] w-full min-h-[250px] rounded-[50px] m-3 flex flex-col justify-between relative">
-      <div className="Details pt-3 pl-5 md:pl-20 text-left text-2xl md:text-3xl">
+    <div className="bg-[#F3A5A5] rounded-lg p-3 flex flex-col justify-between relative mb-3">
+      <div className="text-2xl font-serif font-bold text-center mb-2">Role</div>
+      <div className="Details text-left text-xl pl-5 font-semibold">
         <span className="font-bold">Details:</span> Lorem ipsum dolor sit amet
         consectetur adipisicing elit. Facilis repellendus labore, maxime
         perspiciatis veniam nobis quam ullam neque sed rerum mollitia,
@@ -17,11 +18,16 @@ const jobInfo = () => {
         eligendi est exercitationem perspiciatis. Nihil magnam officia, nulla
         aliquam dolore nisi provident, repellendus, magni quasi labore debitis?
       </div>
-      <div className="outerLink flex justify-center">
+      {/* <div className="outerLink flex justify-center">
         <a target="_blank" href="http://www.google.com">
           <div className="links cursor-pointer bg-[#8B9DFF] w-[90vw] sm:w-[75vw] h-[7vh] sm:h-[5vh] rounded-full flex items-center justify-center m-4">
             <h1 className="text-xl sm:text-2xl pl-4">Links:</h1>
           </div>
+        </a>
+      </div> */}
+      <div className="bg-[#8B9DFF] rounded-lg p-3 font-bold text-xl mt-3 text-center">
+        <a target="_blank" href="http://www.google.com">
+          Links
         </a>
       </div>
     </div>

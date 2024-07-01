@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from "react";
+import Cookies from "js-cookie";
 import ACLogo from "../assets/AlumniCellLogo.jpeg";
 import iitilogo from "../assets/iitilogo.png";
 import profilelogo from "../assets/profilelogo.jpg";
-// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Header() {
   const [toggle, setToggle] = useState(true);
@@ -14,6 +14,9 @@ function Header() {
   function handleToggle() {
     setToggle(!toggle);
   }
+
+  const token = Cookies.get("userdata");
+
   return (
     <>
       <div className="p-2 bg-[#0096C7] flex justify-around">
@@ -105,7 +108,7 @@ function Header() {
                 <a
                   class="dropdown-item text-xl text-black bg-white"
                   href="/aboutus/MessageFromDeanACR">
-                   Message from Dean ACR
+                  Message from Dean ACR
                 </a>
               </li>
               <li>
@@ -244,9 +247,20 @@ function Header() {
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item text-xl text-black bg-white" href="#">
-                  profile
-                </a>
+                {token && (
+                  <a
+                    class="dropdown-item text-xl text-black bg-white"
+                    href="/profile">
+                    profile
+                  </a>
+                )}
+                {!token && (
+                  <a
+                    class="dropdown-item text-xl text-black bg-white"
+                    href="/signup">
+                    SignUp
+                  </a>
+                )}
               </li>
               <li>
                 <button class="dropdown-item text-xl text-black bg-white">

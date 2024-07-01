@@ -14,6 +14,8 @@ import Jobs from "./Mentorship/jobs";
 import AlumniNews from "./Updates/alumniNews";
 import NewsLetter from "./Updates/newsletter";
 import AlumniAwards from "./Awards/alumniAwards";
+import SignUp from "../Components/signUp";
+import Profile from "../Components/profile";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function Pages() {
@@ -28,8 +30,14 @@ function Pages() {
           />
           <Route path="/aboutus/developers" element={<Developers />} />
           <Route path="/aboutus/OurTeam" element={<OurTeam />} />
-          <Route path="/aboutus/MessageFromDirector" element={<MessageFromDirector />} />
-          <Route path="/aboutus/MessageFromDeanACR" element={<MessageFromDeanACR />} />
+          <Route
+            path="/aboutus/MessageFromDirector"
+            element={<MessageFromDirector />}
+          />
+          <Route
+            path="/aboutus/MessageFromDeanACR"
+            element={<MessageFromDeanACR />}
+          />
           <Route path="/awards/alumniAwards" element={<AlumniAwards />} />
           <Route path="/events/latestEvents" element={<LatestEvents />} />
           <Route path="/events/reunions" element={<Reunions />} />
@@ -42,6 +50,8 @@ function Pages() {
           <Route path="/updates/alumniNews" element={<AlumniNews />} />
           <Route path="/updates/newsletter" element={<NewsLetter />} />
           <Route path="/updates/noticeBoard" element={<NoticeBoard />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </>

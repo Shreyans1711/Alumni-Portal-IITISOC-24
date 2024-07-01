@@ -1,6 +1,10 @@
-.body{
-    background-image: url("../../assets/IIT INDORE.jpg");
-    background-image: linear-gradient(180deg,"../../assets/IIT INDORE.jpg",white);
-    background-size: cover;
-    height:200vh;
+.body {
+  background-image: url("../../assets/IIT INDORE.jpg");
+  background-image: linear-gradient(
+    180deg,
+    "../../assets/IIT INDORE.jpg",
+    white
+  );
+  background-size: cover;
+  height: 200vh;
 }

@@ -1,8 +1,23 @@
-import React from "react";
+import { React, useState } from "react";
 import Header from "./header";
 import Footer from "./footer";
+import Cookies from "js-cookie";
+import { jwtDecode } from "jwt-decode";
 
 function SignUp() {
+  const token = Cookies.get("userdata");
+  console.log(token);
+  if (token) {
+    const data = jwtDecode(token);
+    console.log(data);
+  }
+
+  const handleSignUp = () => {
+    window.open("http://localhost:3000/auth/google", "_self");
+  };
+
+  // getData();
+
   return (
     <>
       <body className="bg-[#90E0EF]">
@@ -59,7 +74,7 @@ function SignUp() {
                 <div>Confirm password:</div>
                 <div>
                   <input
-                    type="confirm password"
+                    type="password"
                     name="confirm password"
                     placeholder="password"
                     className="rounded-lg border-2 border-black ml-3 w-auto text-center font-serif"></input>
@@ -68,6 +83,16 @@ function SignUp() {
               <div className="text-center">
                 <button className="bg-[#023E8A] p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
                   Register
+                </button>
+              </div>
+              <div className="text-center mt-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    handleSignUp();
+                  }}
+                  className="bg-[#023E8A] p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
+                  SignUp with google
                 </button>
               </div>
             </div>
