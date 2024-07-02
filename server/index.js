@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const authRoutes = require("./Routes/auth");
+const eventRoutes = require("./Routes/event");
 const mongoose = require("mongoose");
 const User = require("./models/user-model");
 const session = require("express-session");
@@ -8,6 +9,7 @@ const passport = require("passport");
 const passportsetup = require("./controllers/passport-setup");
 const cookiesMiddleware = require("universal-cookie-express");
 const keys = require("./keys");
+const cookieParser = require("cookie-parser");
 
 const PORT = 3000;
 
@@ -29,6 +31,7 @@ app.use(
     cookie: { secure: true },
   })
 );
+app.use(cookieParser());
 
 // app.use(
 //   cookieSession({
@@ -45,6 +48,7 @@ app.get("/api", (req, res) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/events", eventRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

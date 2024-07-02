@@ -1,29 +1,23 @@
 import React from "react";
 import boy from "../../../assets/unknownboys.jpeg";
 
-function UCEvent() {
+function UCEvent(props) {
   return (
     <>
-      <div className="bg-white m-5 rounded-lg p-3 lg:flex">
+      <div className="bg-white m-5 rounded-lg p-3 lg:flex ">
         <div
           className="lg:w-2/3 lg:h-auto bg-cover lg:rounded-l-lg max-lg:rounded-t-lg w-full h-[200px]"
-          style={{ backgroundImage: `url(${boy})` }}></div>
+          style={{ backgroundImage: `url(${props.EventImgURL})` }}></div>
         <div className="bg-[#00B4D8] lg:rounded-r-lg text-center max-lg:rounded-b-lg">
           <div className="text-white font-bold font-serif text-3xl m-2 font-outline-1">
-            Event Name
+            {props.EventName}
           </div>
           <div className="text-white font-semibold text-xl pl-2 pr-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Id nibh
-            tortor id aliquet lectus proin nibh. Proin sagittis nisl rhoncus
-            mattis rhoncus. Viverra maecenas accumsan lacus vel. Id aliquet
-            lectus proin nibh nisl. Enim facilisis gravida neque convallis a
-            cras semper auctor. Duis ultricies lacus sed turpis tincidunt id
-            aliquet risus. At imperdiet dui accumsan sit amet nulla facilisi
-            morbi. Sapien faucibus et molestie ac feugiat sed lectus. Semper
-            auctor neque vitae tempus.
+            {props.EventDetails}
           </div>
-          <button class="btn btn-primary m-3">Registration Link</button>
+          <button href={props.EventLink} class="btn btn-primary m-3">
+            Registration Link
+          </button>
         </div>
       </div>
     </>
