@@ -83,4 +83,11 @@ router.post("/updateUser", (req, res) => {
   });
 });
 
+router.post("/getupdateddata", (req, res) => {
+  const email = req.body;
+  const data = User.findOne({ email: email.email }).then((e) => {
+    res.json(e);
+  });
+});
+
 module.exports = router;

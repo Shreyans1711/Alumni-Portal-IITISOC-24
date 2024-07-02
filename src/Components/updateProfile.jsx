@@ -32,8 +32,6 @@ function UpdateProfile() {
     console.log(check);
     if (check.msg == "User updated") {
       console.log(formdata);
-      Cookies.set("updateddata", formdata);
-      console.log(check);
     }
   };
 

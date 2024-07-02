@@ -44,7 +44,7 @@ function Home() {
               Welcome Home
             </h1>
             <div className="outer">
-              <div className="text-xl md:text-4xl p-20 text-center ">
+              <div className="text-xl md:text-4xl p-20 text-center font-serif">
                 Step into the virtual home of IIT INDORE's global community—a
                 place where the Cardinal spirit thrives beyond the palm-lined
                 campus. Reconnect with classmates, discover opportunities, and

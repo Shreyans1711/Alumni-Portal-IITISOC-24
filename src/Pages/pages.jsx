@@ -18,6 +18,7 @@ import SignUp from "../Components/signUp";
 import Profile from "../Components/profile";
 import Login from "../Components/login";
 import UpdateProfile from "../Components/updateProfile";
+import AddEvent from "../Components/addEvent";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function Pages() {
@@ -56,6 +57,7 @@ function Pages() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/updateprofile" element={<UpdateProfile />} />
+          <Route path="/events/addevent" element={<AddEvent />} />
         </Routes>
       </Router>
     </>
