@@ -19,6 +19,8 @@ import Profile from "../Components/profile";
 import Login from "../Components/login";
 import UpdateProfile from "../Components/updateProfile";
 import AddEvent from "../Components/addEvent";
+import AddReunion from "../Components/addReunion";
+import AddChapter from "../Components/addChapter";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function Pages() {
@@ -58,6 +60,8 @@ function Pages() {
           <Route path="/login" element={<Login />} />
           <Route path="/updateprofile" element={<UpdateProfile />} />
           <Route path="/events/addevent" element={<AddEvent />} />
+          <Route path="/events/addreunion" element={<AddReunion />} />
+          <Route path="/events/addchapter" element={<AddChapter />} />
         </Routes>
       </Router>
     </>

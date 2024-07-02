@@ -72,7 +72,7 @@ function Header() {
               style={{
                 width: "80px",
                 height: "70px",
-                backgroundColor: "transparent",
+                backgroundColor: "white",
               }}
             />
           </a>

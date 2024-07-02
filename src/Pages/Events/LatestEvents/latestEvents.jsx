@@ -3,10 +3,19 @@ import Header from "../../../Components/header";
 import Footer from "../../../Components/footer";
 import UCEvent from "./UCEvents";
 import PEvent from "./PEvents";
+import Cookies from "js-cookie";
+import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function LatestEvents() {
+  const token = Cookies.get("userdata");
+  var data2;
+  if (token) {
+    data2 = jwtDecode(token);
+    // console.log(data2);
+  }
+
   const navigate = useNavigate();
   function handleAddEvent() {
     navigate("/events/addevent");
@@ -26,7 +35,7 @@ function LatestEvents() {
   useEffect(() => {
     getEvents();
   }, [1]);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <body className="bg-[#90E0EF]">
@@ -48,16 +57,18 @@ function LatestEvents() {
           <PEvent />
           <PEvent />
         </div>
-        <div className="text-center mt-2">
-          <button
-            type="button"
-            onClick={() => {
-              handleAddEvent();
-            }}
-            className="bg-[#023E8A] mb-2 p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
-            Add Event
-          </button>
-        </div>
+        {data2.email == "abhi2004iiti@gmail.com" && (
+          <div className="text-center mt-2">
+            <button
+              type="button"
+              onClick={() => {
+                handleAddEvent();
+              }}
+              className="bg-[#023E8A] mb-2 p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
+              Add Event
+            </button>
+          </div>
+        )}
         <div className="footer">
           <Footer />
         </div>
