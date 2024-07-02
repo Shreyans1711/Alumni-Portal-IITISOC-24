@@ -3,6 +3,7 @@ const router = require("express").Router();
 const passport = require("passport");
 const passportsetup = require("../controllers/passport-setup");
 const jwt = require("jsonwebtoken");
+const User = require("../models/user-model");
 
 router.get("/login", (req, res) => {
   res.json({ msg: "login page" });
@@ -50,5 +51,36 @@ router.get(
     res.redirect("http://localhost:8000");
   }
 );
+
+router.post("/updateUser", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  User.findOne({ email: data.email }).then((user) => {
+    if (user) {
+      User.findOneAndUpdate(
+        { email: data.email },
+        {
+          $set: {
+            firstname: data.firstname,
+            lastname: data.lastname,
+            instituteName: data.instituteName,
+            department: data.department,
+            course: data.course,
+            address: data.address,
+            work: data.work,
+            password: data.password,
+          },
+        }
+      ).then((err, doc) => {
+        if (err) {
+          console.log(err);
+        }
+      });
+      res.json({ msg: "User updated" });
+    } else {
+      res.json({ msg: "User not found" });
+    }
+  });
+});
 
 module.exports = router;

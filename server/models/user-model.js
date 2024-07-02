@@ -5,10 +5,12 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
+    default: "",
   },
   email: {
     type: String,
     required: true,
+    default: "",
   },
   imgurl: {
     type: String,
@@ -16,7 +18,38 @@ const userSchema = new mongoose.Schema({
   googleId: {
     type: String,
     required: true,
-    unique: true,
+  },
+  firstname: {
+    type: String,
+    default: "",
+  },
+  lastname: {
+    type: String,
+    default: "",
+  },
+  instituteName: {
+    type: String,
+    default: "",
+  },
+  department: {
+    type: String,
+    default: "",
+  },
+  course: {
+    type: String,
+    default: "",
+  },
+  address: {
+    type: String,
+    default: "",
+  },
+  work: {
+    type: String,
+    default: "",
+  },
+  password: {
+    type: String,
+    default: "",
   },
 });
 

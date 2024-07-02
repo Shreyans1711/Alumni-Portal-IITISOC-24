@@ -40,12 +40,12 @@ function Home() {
         <div class="slideshow">
           <img src={iitindorephoto} />
           <div class="slogan">
-            <h1 className="text-4xl md:text-9xl text-center text-black">
+            <h1 className="font-bold font-serif text-4xl md:text-9xl text-center">
               Welcome Home
             </h1>
             <div className="outer">
-              <div className="text-xl md:text-4xl p-10 text-center font-semibold text-white">
-                Step into the virtual home of IIT INODRE's global community—a
+              <div className="text-xl md:text-4xl p-20 text-center ">
+                Step into the virtual home of IIT INDORE's global community—a
                 place where the Cardinal spirit thrives beyond the palm-lined
                 campus. Reconnect with classmates, discover opportunities, and
                 help juniors.

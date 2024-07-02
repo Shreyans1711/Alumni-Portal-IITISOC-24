@@ -3,6 +3,8 @@ import Header from "./header";
 import Footer from "./footer";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
+import UpdateProfile from "./updateProfile";
 
 function Profile() {
   const token = Cookies.get("userdata");
@@ -10,8 +12,15 @@ function Profile() {
   var data;
   if (token) {
     data = jwtDecode(token);
-    console.log(data);
   }
+  const navigate = useNavigate();
+
+  function handleUpdateProfile() {
+    console.log("hello");
+    navigate("/updateprofile");
+  }
+  const updatedData = Cookies.get("updatedData");
+  console.log(updatedData);
 
   return (
     <>
@@ -43,6 +52,16 @@ function Profile() {
             <div className="bg-[#F5A7A7] text-3xl p-3 rounded-lg text-center mb-5 flex justify-between max-sm:flex-col">
               <div>Password:</div>
               <div>{data.email}</div>
+            </div>
+            <div className="text-center mt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  handleUpdateProfile();
+                }}
+                className="bg-[#023E8A] p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
+                Update Profile
+              </button>
             </div>
           </div>
         </div>
