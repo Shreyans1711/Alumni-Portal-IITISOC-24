@@ -21,9 +21,9 @@ passport.use(
       callbackURL: "http://localhost:3000/auth/google/redirect",
     },
     (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
       User.findOne({ googleId: profile.id }).then((currentUser) => {
         if (currentUser) {
-          console.log("user is: ", currentUser);
           done(null, currentUser);
         } else {
           new User({

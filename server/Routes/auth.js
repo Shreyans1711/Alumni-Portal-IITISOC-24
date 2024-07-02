@@ -1,3 +1,4 @@
+const express = require("express");
 const router = require("express").Router();
 const passport = require("passport");
 const passportsetup = require("../controllers/passport-setup");
@@ -7,8 +8,13 @@ router.get("/login", (req, res) => {
   res.json({ msg: "login page" });
 });
 
-router.get("/logout", (req, res) => {
-  res.json({ msg: "logout page" });
+router.post("/logout", function (req, res, next) {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.json({ msg: "logout Sucessfull" });
+  });
 });
 
 router.get(

@@ -3,6 +3,9 @@ import Cookies from "js-cookie";
 import ACLogo from "../assets/AlumniCellLogo.jpeg";
 import iitilogo from "../assets/iitilogo.png";
 import profilelogo from "../assets/profilelogo.jpg";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Header() {
   const [toggle, setToggle] = useState(true);
@@ -17,8 +20,28 @@ function Header() {
 
   const token = Cookies.get("userdata");
 
+  const logoutSucess = () =>
+    toast.success("logout Successfull", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      // transition: Bounce,
+    });
+
+  const handleLogout = async () => {
+    const res = await axios.post("http://localhost:3000/auth/logout");
+    Cookies.remove("userdata");
+    logoutSucess();
+  };
+
   return (
     <>
+      <ToastContainer />
       <div className="p-2 bg-[#0096C7] flex justify-around">
         <div>
           <a href="/">
@@ -49,7 +72,7 @@ function Header() {
               style={{
                 width: "80px",
                 height: "70px",
-                backgroundColor: "white",
+                backgroundColor: "transparent",
               }}
             />
           </a>
@@ -263,9 +286,21 @@ function Header() {
                 )}
               </li>
               <li>
-                <button class="dropdown-item text-xl text-black bg-white">
-                  logout
-                </button>
+                {token && (
+                  <a
+                    class="dropdown-item text-xl text-black bg-white"
+                    href="#"
+                    onClick={handleLogout}>
+                    logout
+                  </a>
+                )}
+                {!token && (
+                  <a
+                    class="dropdown-item text-xl text-black bg-white"
+                    href="/login">
+                    login
+                  </a>
+                )}
               </li>
             </ul>
           </div>

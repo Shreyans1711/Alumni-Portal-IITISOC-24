@@ -50,6 +50,16 @@ function Login() {
                   Login
                 </button>
               </div>
+              <div className="text-center m-3">
+                <button
+                  type="button"
+                  onClick={() => {
+                    handleLogin();
+                  }}
+                  className="bg-[#023E8A] p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
+                  Login with Google
+                </button>
+              </div>
             </div>
           </div>
         </form>

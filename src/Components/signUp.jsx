@@ -6,7 +6,6 @@ import { jwtDecode } from "jwt-decode";
 
 function SignUp() {
   const token = Cookies.get("userdata");
-  console.log(token);
   if (token) {
     const data = jwtDecode(token);
     console.log(data);
