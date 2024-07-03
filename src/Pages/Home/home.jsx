@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import iitindorephoto from "../../assets/IIT INDORE.jpg";
-
+import UpcomingEvent from "../../Components/UpcomingEvent"
 function Home() {
   const signUpSucess = () =>
     toast.success("SignUp Successfull !", {
@@ -52,13 +52,39 @@ function Home() {
               </div>
             </div>
           </div>
+          <div>
+              <h1 className="font-bold font-serif text-3xl md:text-8xl text-center pt-32 pb-10">Upcoming Events</h1>
+              <h5 className="text-2xl md:text-4xl text-center">Peek at some alumni events happening just around the corner.</h5>
+              <div className="space-y-4">
+                <div className="border-b border-gray-300 pb-4">
+                  <UpcomingEvent />
+                </div>
+                <div className="border-b border-gray-300 pb-4">
+                  <UpcomingEvent />
+                </div>
+                <div className="border-b border-gray-300 pb-4">
+                  <UpcomingEvent />
+                </div>
+                <div className="border-b border-gray-300 pb-4">
+                  <UpcomingEvent />
+                </div>
+              </div>
+
+              <div className="flex justify-center m-5 cursor-pointer">
+                <div onClick={() => { window.open("http://localhost:8000/events/latestevents") }} className="text-xs md:text-sm moreEvents relative group bg-red-600 w-[30vw] md:w-[15vw] h-[10vh] text-white font-bold flex justify-center items-center">
+                  <span className="border-b-2 border-transparent group-hover:border-white transition duration-100">
+                    View more events
+                  </span>
+                </div>
+              </div>
+        </div>
         </div>
       </div>
-      <div className="text-center text-4xl">Content</div>
       <div className="footer">
         <Footer />
       </div>
     </body>
+    
   );
 }
 
