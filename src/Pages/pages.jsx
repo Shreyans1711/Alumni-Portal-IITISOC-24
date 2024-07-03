@@ -21,6 +21,7 @@ import UpdateProfile from "../Components/updateProfile";
 import AddEvent from "../Components/addEvent";
 import AddReunion from "../Components/addReunion";
 import AddChapter from "../Components/addChapter";
+import ChatPage from "../Components/chatPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function Pages() {
@@ -62,6 +63,7 @@ function Pages() {
           <Route path="/events/addevent" element={<AddEvent />} />
           <Route path="/events/addreunion" element={<AddReunion />} />
           <Route path="/events/addchapter" element={<AddChapter />} />
+          <Route path="/mentorship/chatpage" element={<ChatPage />} />
         </Routes>
       </Router>
     </>

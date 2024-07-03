@@ -39,11 +39,13 @@ router.get(
   authCheck,
   (req, res) => {
     const user = req.user;
+    // console.log(user);
     const token = jwt.sign(
       {
         username: user.username,
         email: user.email,
         imgurl: user.imgurl,
+        id: user._id,
       },
       "secret"
     );

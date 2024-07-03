@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const authRoutes = require("./Routes/auth");
 const eventRoutes = require("./Routes/event");
+const mentorshipRoutes = require("./Routes/mentorship");
 const mongoose = require("mongoose");
 const User = require("./models/user-model");
 const session = require("express-session");
@@ -10,6 +11,7 @@ const passportsetup = require("./controllers/passport-setup");
 const cookiesMiddleware = require("universal-cookie-express");
 const keys = require("./keys");
 const cookieParser = require("cookie-parser");
+const socket = require("socket.io");
 
 const PORT = 3000;
 
@@ -49,7 +51,29 @@ app.get("/api", (req, res) => {
 
 app.use("/auth", authRoutes);
 app.use("/events", eventRoutes);
+app.use("/mentorship", mentorshipRoutes);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
+});
+const io = socket(server, {
+  cors: {
+    origin: "http://localhost:8000",
+  },
+});
+
+global.onlineUsers = new Map();
+io.on("connection", (socket) => {
+  global.chatSocket = socket;
+  socket.on("add-user", (userId) => {
+    onlineUsers.set(userId, socket.id);
+  });
+
+  socket.on("send-msg", (data) => {
+    const sendUserSocket = onlineUsers.get(data.to);
+    // console.log(data);
+    if (sendUserSocket) {
+      socket.to(sendUserSocket).emit("msg-recieve", data.newmsg);
+    }
+  });
 });

@@ -1,22 +1,40 @@
 import React from "react";
 import "../Pages/Mentorship/Mentorship-Styles/mentorInfo.css";
-const mentorInfo = () => {
+import Cookies from "js-cookie";
+import { NavLink } from "react-router-dom";
+
+function mentorInfo(props) {
+  function handleCurrentChat() {
+    // e.preventDefault;
+    console.log("hello");
+    Cookies.set("currentChat", props._id);
+    // const navigate = useNavigate();
+    // navigate("/chatpage");
+  }
+
   return (
-    <div className="md:flex md:justify-center gap-5 p-5 flex-col md:flex-row">
-      <div className="outer flex justify-center">
-        <div className="MentorPhoto bg-cover rounded-full w-[59vw] h-[59vw] md:w-[30vh] md:h-[30vh]"></div>
-      </div>
-      <div className="bg-[#F5A7A7] rounded-full w-[100%] md:w-full md:rounded-full">
-        <div className="text-xl">
-          <div className="DetailOfMentor flex flex-col items-center md:items-start pt-12 text-center md:text-left pl-0 md:pl-10">
-            <div className="font-bold text-2xl">XYZ</div>
-            <div>I am there to help you</div>
-            <div className="pb-5">I am working here</div>
-          </div>
-        </div>
-      </div>
+    <div className="bg-[#F5A7A7] flex flex-col justify-center m-3 p-3 rounded-lg w-[400px]">
+      <center>
+        <div
+          className="rounded-[50%] bg-cover"
+          style={{
+            backgroundImage: `url(${props.imgurl})`,
+            width: "80px",
+            height: "80px",
+          }}></div>
+        <div className="font-serif text-xl">Hi there!</div>
+        <div className="font-serif text-xl">I am there to help you</div>
+      </center>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          handleCurrentChat();
+        }}
+        className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black">
+        <NavLink to="/mentorship/chatpage">start chat</NavLink>
+      </button>
     </div>
   );
-};
+}
 
 export default mentorInfo;
