@@ -6,6 +6,7 @@ import { IoMdSend } from "react-icons/io";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { io } from "socket.io-client";
+import { NavLink } from "react-router-dom";
 
 function ChatPage() {
   const token = Cookies.get("userdata");
@@ -94,6 +95,18 @@ function ChatPage() {
     // console.log()
   }, [arrivalMessage]);
 
+  const handleTerminateChat = async () => {
+    const res = await axios
+      .post("http://localhost:3000/mentorship/terminatechat", {
+        mentorData: data,
+        menteeData: currentChat,
+        messages: messages,
+      })
+      .then((e) => {
+        console.log(e.data);
+      });
+  };
+
   return (
     <>
       <body className="bg-[#90E0EF]">
@@ -150,6 +163,14 @@ function ChatPage() {
                 }
               }}>
               <IoMdSend />
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                handleTerminateChat();
+              }}
+              className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black">
+              <NavLink to="/">terminate chat</NavLink>
             </button>
           </div>
         </div>

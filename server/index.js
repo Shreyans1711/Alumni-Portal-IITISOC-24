@@ -3,6 +3,7 @@ const cors = require("cors");
 const authRoutes = require("./Routes/auth");
 const eventRoutes = require("./Routes/event");
 const mentorshipRoutes = require("./Routes/mentorship");
+const updatesRoutes = require("./Routes/updates");
 const mongoose = require("mongoose");
 const User = require("./models/user-model");
 const session = require("express-session");
@@ -52,6 +53,7 @@ app.get("/api", (req, res) => {
 app.use("/auth", authRoutes);
 app.use("/events", eventRoutes);
 app.use("/mentorship", mentorshipRoutes);
+app.use("/updates", updatesRoutes);
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

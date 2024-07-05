@@ -34,7 +34,7 @@ function LatestEvents() {
   };
   useEffect(() => {
     getEvents();
-  }, [1]);
+  }, []);
   // console.log(data);
   return (
     <>
@@ -57,7 +57,7 @@ function LatestEvents() {
           <PEvent />
           <PEvent />
         </div>
-        {data2.email == "abhi2004iiti@gmail.com" && (
+        {data2 && data2.email == "abhi2004iiti@gmail.com" && (
           <div className="text-center mt-2">
             <button
               type="button"

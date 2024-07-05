@@ -4,7 +4,7 @@ import boy from "../../../assets/unknownboys.jpeg";
 function UCEvent(props) {
   return (
     <>
-      <div className="bg-white m-5 rounded-lg p-3 lg:flex ">
+      <div className="bg-white m-5 rounded-lg p-3 lg:flex">
         <div
           className="lg:w-2/3 lg:h-auto bg-cover lg:rounded-l-lg max-lg:rounded-t-lg w-full h-[200px]"
           style={{ backgroundImage: `url(${props.EventImgURL})` }}></div>

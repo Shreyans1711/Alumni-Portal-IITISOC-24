@@ -21,7 +21,10 @@ import UpdateProfile from "../Components/updateProfile";
 import AddEvent from "../Components/addEvent";
 import AddReunion from "../Components/addReunion";
 import AddChapter from "../Components/addChapter";
+import AddAlumniNews from "../Components/addAlumniNews";
 import ChatPage from "../Components/chatPage";
+import AcceptOrReject from "../Components/AcceptOrReject";
+import ChatsAccepted from "../Components/ChatsAccepted";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function Pages() {
@@ -63,7 +66,13 @@ function Pages() {
           <Route path="/events/addevent" element={<AddEvent />} />
           <Route path="/events/addreunion" element={<AddReunion />} />
           <Route path="/events/addchapter" element={<AddChapter />} />
+          <Route path="/updates/addalumninews" element={<AddAlumniNews />} />
           <Route path="/mentorship/chatpage" element={<ChatPage />} />
+          <Route
+            path="/mentorship/acceptorreject"
+            element={<AcceptOrReject />}
+          />
+          <Route path="/mentorship/chatsaccepted" element={<ChatsAccepted />} />
         </Routes>
       </Router>
     </>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Hi, I am an Alumni Portal User</h2>
+
+    <p>I would like to chat with you regarding the future oppertunities</p>
+
+    <button id="myBtn">Accept Request</button>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("myBtn").addEventListener("click", response);
+
+      function response() {
+        document.getElementById("demo").innerHTML = Date();
+        console.log("Request Accepted");
+      }
+    </script>
+  </body>
+</html>
