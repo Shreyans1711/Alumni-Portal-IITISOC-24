@@ -164,14 +164,16 @@ function ChatPage() {
               }}>
               <IoMdSend />
             </button>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                handleTerminateChat();
-              }}
-              className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black">
-              <NavLink to="/">terminate chat</NavLink>
-            </button>
+            {data && data.role == "alumni" && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleTerminateChat();
+                }}
+                className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black">
+                <NavLink to="/">terminate chat</NavLink>
+              </button>
+            )}
           </div>
         </div>
         <div className="footer">

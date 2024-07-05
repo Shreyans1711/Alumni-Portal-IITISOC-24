@@ -13,7 +13,7 @@ function LatestEvents() {
   var data2;
   if (token) {
     data2 = jwtDecode(token);
-    // console.log(data2);
+    console.log(data2);
   }
 
   const navigate = useNavigate();
@@ -57,7 +57,7 @@ function LatestEvents() {
           <PEvent />
           <PEvent />
         </div>
-        {data2 && data2.email == "abhi2004iiti@gmail.com" && (
+        {data2 && data2.role == "admin" && (
           <div className="text-center mt-2">
             <button
               type="button"

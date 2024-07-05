@@ -46,6 +46,7 @@ router.get(
         email: user.email,
         imgurl: user.imgurl,
         id: user._id,
+        role: user.role,
       },
       "secret"
     );
