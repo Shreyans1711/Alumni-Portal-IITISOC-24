@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const handleClick = (link) => {
   window.open(link, "_blank");
@@ -7,7 +8,9 @@ const handleClick = (link) => {
 function AlumniInfo(props) {
   return (
     <>
-      <div onClick={() => handleClick(props.link)} className="cursor-pointer m-4 w-[400px] h-auto bg-white rounded-lg p-4 flex flex-col justify-center">
+      <div
+        onClick={() => handleClick(props.lin)}
+        className="cursor-pointer m-4 w-[400px] h-auto bg-white rounded-lg p-4 flex flex-col justify-center">
         <div className="flex">
           <div>
             <img
@@ -24,6 +27,17 @@ function AlumniInfo(props) {
             <div>Name: {props.name}</div>
             <div>Year: {props.year}</div>
             <div>Dept: {props.dept}</div>
+            <div className="flex justify-center gap-3 mt-3 text-2xl">
+              <a href={props.ig}>
+                <FaInstagram />
+              </a>
+              <a href={props.lin}>
+                <FaLinkedin />
+              </a>
+              <a href={props.git}>
+                <FaGithub />
+              </a>
+            </div>
           </div>
         </div>
       </div>

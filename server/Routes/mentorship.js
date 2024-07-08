@@ -3,6 +3,7 @@ const User = require("../models/user-model");
 const Messages = require("../models/message-model");
 const ChatRequests = require("../models/chatrequests-model");
 const ChatRequestsAccepted = require("../models/chatrequestsaccepted-model");
+const Jobs = require("../models/jobs-model");
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
@@ -227,6 +228,30 @@ router.post("/terminatechat", (req, res) => {
   }).then((e) => {});
   console.log(req.body);
   res.json({ msg: "Chat Terminated" });
+});
+
+router.post("/addjob", (req, res) => {
+  const data = req.body;
+  new Jobs({
+    JobName: data.jobName,
+    JobDetails: data.jobDetails,
+    JobLink: data.jobLink,
+  })
+    .save()
+    .then((e) => {
+      res.redirect("http://localhost:8000/mentorship/jobs");
+    });
+});
+
+router.get("/getalljobs", (req, res) => {
+  const jobdata = Jobs.find({}).then((err, list) => {
+    if (list) {
+      res.json(list);
+    } else {
+      res.json(err);
+    }
+  });
+  //   console.log(Eventsdata);
 });
 
 module.exports = router;

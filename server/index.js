@@ -4,6 +4,8 @@ const authRoutes = require("./Routes/auth");
 const eventRoutes = require("./Routes/event");
 const mentorshipRoutes = require("./Routes/mentorship");
 const updatesRoutes = require("./Routes/updates");
+const aboutusRoutes = require("./Routes/aboutus");
+const alumniawardsRoutes = require("./Routes/alumniawards");
 const mongoose = require("mongoose");
 const User = require("./models/user-model");
 const session = require("express-session");
@@ -54,6 +56,8 @@ app.use("/auth", authRoutes);
 app.use("/events", eventRoutes);
 app.use("/mentorship", mentorshipRoutes);
 app.use("/updates", updatesRoutes);
+app.use("/aboutus", aboutusRoutes);
+app.use("/awards", alumniawardsRoutes);
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

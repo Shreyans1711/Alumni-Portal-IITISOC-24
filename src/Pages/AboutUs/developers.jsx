@@ -11,28 +11,36 @@ function Developers() {
       name: "Shreyans Kothari",
       year: "2022-2026",
       dept: "MEMS",
-      link: "https://www.linkedin.com/in/shreyans-kothari-3a80a722a/",
+      ig: "https://google.com",
+      lin: "https://www.linkedin.com/in/shreyans-kothari-3a80a722a/",
+      git: "https://google.com",
     },
     {
       photo: boy,
       name: "Abhishek AP",
       year: "2022-2026",
       dept: "MEMS",
-      link: "https://www.linkedin.com/in/abhishek-a-p-66104425b/",
+      ig: "https://google.com",
+      lin: "https://www.linkedin.com/in/abhishek-a-p-66104425b/",
+      git: "https://google.com",
     },
     {
       photo: boy,
       name: "Akarshit Trivedi",
       year: "2022-2026",
       dept: "MEMS",
-      link: "https://www.linkedin.com/in/akarshit-trivedi-529243287/",
+      ig: "https://google.com",
+      lin: "https://www.linkedin.com/in/akarshit-trivedi-529243287/",
+      git: "https://google.com",
     },
     {
       photo: boy,
       name: "Aditya Sonkhusre",
       year: "2022-2026",
       dept: "MEMS",
-      link: "https://www.linkedin.com/in/aditya-sonkusare-054175260/",
+      ig: "https://google.com",
+      lin: "https://www.linkedin.com/in/aditya-sonkusare-054175260/",
+      git: "https://google.com",
     },
   ];
 
@@ -44,9 +52,11 @@ function Developers() {
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold font-serif text-white font-outline-2 mt-3 pt-4">
         Website developers
       </h1>
-      <div className="flex flex-wrap justify-center gap-[200px] mt-5 px-4">
+      <div className="flex flex-wrap justify-around gap-[100px] mt-5 px-4">
         {Info.map((info, index) => (
-          <div key={index} className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 p-2 flex flex-col items-center">
+          <div
+            key={index}
+            className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 p-2 flex flex-col items-center">
             <DevelopersInfo {...info} />
           </div>
         ))}

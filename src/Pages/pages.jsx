@@ -25,6 +25,10 @@ import AddAlumniNews from "../Components/addAlumniNews";
 import ChatPage from "../Components/chatPage";
 import AcceptOrReject from "../Components/AcceptOrReject";
 import ChatsAccepted from "../Components/ChatsAccepted";
+import AddJob from "../Components/addJob";
+import AddMember from "../Components/addMember";
+import AddAlumni from "../Components/addAlumni";
+import AddPublication from "../Components/addPublication";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function Pages() {
@@ -73,6 +77,10 @@ function Pages() {
             element={<AcceptOrReject />}
           />
           <Route path="/mentorship/chatsaccepted" element={<ChatsAccepted />} />
+          <Route path="/mentorship/addjob" element={<AddJob />} />
+          <Route path="/aboutus/addmember" element={<AddMember />} />
+          <Route path="/awards/addalumni" element={<AddAlumni />} />
+          <Route path="/updates/addpublication" element={<AddPublication />} />
         </Routes>
       </Router>
     </>

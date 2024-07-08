@@ -11,18 +11,18 @@ import UpcomingEvent from "../../Components/UpcomingEvent";
 import AlumniNews from "../../Components/AlumniNews";
 import JobNews from "../../Components/JobNews";
 function Home() {
-  const signUpSucess = () =>
-    toast.success("SignUp Successfull !", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      // transition: Bounce,
-    });
+  // const signUpSucess = () =>
+  //   toast.success("SignUp Successfull !", {
+  //     position: "top-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "dark",
+  //     // transition: Bounce,
+  //   });
 
   var token = Cookies.get("userdata");
   var data;
