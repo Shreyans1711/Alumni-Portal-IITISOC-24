@@ -132,16 +132,16 @@ function ChatPage() {
           <div>Hi! I am here to help you</div>
         </div>
         <div className="bg-[#D9D9D9] rounded-lg m-3 p-3">
-          <div className="bg-[#F5A7A7] text-3xl p-3 rounded-lg text-center mb-5 max-sm:flex-col">
+          <div className="bg-[#ffa5a5] text-3xl p-3 rounded-lg text-center mb-5 max-sm:flex-col">
             <div className="font-serif">Messages</div>
             {messages.map((message) => {
               return (
-                <p
+                <div
                   className={`message ${
                     message.fromSelf ? "text-white" : "text-black"
                   }`}>
                   {message.message}
-                </p>
+                </div>
               );
             })}
             <input

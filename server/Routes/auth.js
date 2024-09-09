@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user-model");
 
 router.get("/login", (req, res) => {
-  res.json({ msg: "login page" });
+  res.redirect("http://localhost:8000/signup");
 });
 
 router.post("/logout", function (req, res, next) {

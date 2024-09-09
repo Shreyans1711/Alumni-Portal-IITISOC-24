@@ -3,6 +3,10 @@ import Header from "./header";
 import Footer from "./footer";
 
 function Login() {
+  const handleLogin = () => {
+    window.open("http://localhost:3000/auth/google", "_self");
+  };
+
   return (
     <>
       <body className="bg-[#90E0EF]">
