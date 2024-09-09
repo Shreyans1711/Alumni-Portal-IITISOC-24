@@ -26,7 +26,8 @@ function Login() {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="rounded-lg border-2 border-black ml-3 text-center font-serif"></input>
+                    className="rounded-lg border-2 border-black ml-3 text-center font-serif"
+                  ></input>
                 </div>
               </div>
               <div className="bg-[#F5A7A7] text-3xl p-3 rounded-lg text-center mb-5 flex justify-between max-sm:flex-col">
@@ -36,7 +37,8 @@ function Login() {
                     type="password"
                     name="password"
                     placeholder="password"
-                    className="rounded-lg border-2 border-black ml-3 text-center font-serif"></input>
+                    className="rounded-lg border-2 border-black ml-3 text-center font-serif"
+                  ></input>
                 </div>
               </div>
               <div className="bg-[#F5A7A7] text-3xl p-3 rounded-lg text-center mb-5 flex justify-between max-sm:flex-col">
@@ -46,7 +48,8 @@ function Login() {
                     type="confirm password"
                     name="confirm password"
                     placeholder="password"
-                    className="rounded-lg border-2 border-black ml-3 w-auto text-center font-serif"></input>
+                    className="rounded-lg border-2 border-black ml-3 w-auto text-center font-serif"
+                  ></input>
                 </div>
               </div>
               <div className="text-center">
@@ -60,7 +63,8 @@ function Login() {
                   onClick={() => {
                     handleLogin();
                   }}
-                  className="bg-[#023E8A] p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black">
+                  className="bg-[#023E8A] p-3 pt-2 rounded-lg text-2xl text-white text-center font-semibold hover:border-2 hover:border-black"
+                >
                   Login with Google
                 </button>
               </div>

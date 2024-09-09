@@ -291,6 +291,7 @@ function ChatPage() {
           <div
             className="chat-container bg-white rounded-lg shadow-lg mx-auto w-full max-w-3xl p-4 mb-4"
             style={{
+<<<<<<< HEAD
               // backgroundImage: url(https://www.pinterest.com/pin/pinterest--974888650571206450/),
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -386,6 +387,67 @@ function ChatPage() {
                 )}
               </div>
             </div>
+=======
+              backgroundImage: `url(${currentChat.imgurl})`,
+              height: "100px",
+              width: "100px",
+              borderRadius: "50%",
+            }}
+          ></div>
+        </center>
+        <div className="font-serif text-xl font-bold text-center">
+          <div>{currentChat.username}</div>
+          <div>working at {currentChat.work}</div>
+          <div>Hi! I am here to help you</div>
+        </div>
+        <div className="bg-[#D9D9D9] rounded-lg m-3 p-3">
+          <div className="bg-[#ffa5a5] text-3xl p-3 rounded-lg text-center mb-5 max-sm:flex-col">
+            <div className="font-serif">Messages</div>
+            {messages.map((message) => {
+              return (
+                <div
+                  className={`message ${
+                    message.fromSelf ? "text-white" : "text-black"
+                  }`}
+                >
+                  {message.message}
+                </div>
+              );
+            })}
+            <input
+              type="text"
+              name="newMessage"
+              placeholder="type message"
+              onChange={(e) => {
+                setNewmsg(e.target.value);
+              }}
+              value={newmsg}
+              className="rounded-lg border-2 border-black ml-3 text-center font-serif"
+            ></input>
+            <button
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                if (newmsg.length > 0) {
+                  handleSendMsg();
+                  setNewmsg("");
+                }
+              }}
+            >
+              <IoMdSend />
+            </button>
+            {data && data.role == "alumni" && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleTerminateChat();
+                }}
+                className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black"
+              >
+                <NavLink to="/">terminate chat</NavLink>
+              </button>
+            )}
+>>>>>>> 50710660fbbd66cb931ff3317fb200e9c07b0a15
           </div>
         </div>
         {/* Footer */}
