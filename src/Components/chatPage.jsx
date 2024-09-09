@@ -124,7 +124,8 @@ function ChatPage() {
               height: "100px",
               width: "100px",
               borderRadius: "50%",
-            }}></div>
+            }}
+          ></div>
         </center>
         <div className="font-serif text-xl font-bold text-center">
           <div>{currentChat.username}</div>
@@ -139,7 +140,8 @@ function ChatPage() {
                 <div
                   className={`message ${
                     message.fromSelf ? "text-white" : "text-black"
-                  }`}>
+                  }`}
+                >
                   {message.message}
                 </div>
               );
@@ -152,7 +154,8 @@ function ChatPage() {
                 setNewmsg(e.target.value);
               }}
               value={newmsg}
-              className="rounded-lg border-2 border-black ml-3 text-center font-serif"></input>
+              className="rounded-lg border-2 border-black ml-3 text-center font-serif"
+            ></input>
             <button
               type="submit"
               onClick={(e) => {
@@ -161,7 +164,8 @@ function ChatPage() {
                   handleSendMsg();
                   setNewmsg("");
                 }
-              }}>
+              }}
+            >
               <IoMdSend />
             </button>
             {data && data.role == "alumni" && (
@@ -170,7 +174,8 @@ function ChatPage() {
                   e.preventDefault();
                   handleTerminateChat();
                 }}
-                className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black">
+                className=" m-2 bg-[#D9D9D9] rounded-lg font-semibold text-xl p-2 hover:border-2 hover:border-black"
+              >
                 <NavLink to="/">terminate chat</NavLink>
               </button>
             )}

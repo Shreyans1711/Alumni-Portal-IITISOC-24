@@ -2,12 +2,14 @@ import React from "react";
 import Header from "../../Components/header";
 import Footer from "../../Components/footer";
 import DevelopersInfo from "../../Info/developersInfo";
-import boy from "../../assets/unknownboys.jpeg";
-
+import sasuke from "../../assets/Sasuke.jpg"
+import shreyans from "../../assets/Shreyans.jpg"
+import akarshit from "../../assets/Akarshit.jpg"
+import abhishek from "../../assets/Abhishek.jpg"
 function Developers() {
   const Info = [
     {
-      photo: boy,
+      photo: shreyans,
       name: "Shreyans Kothari",
       year: "2022-2026",
       dept: "MEMS",
@@ -16,7 +18,7 @@ function Developers() {
       git: "https://google.com",
     },
     {
-      photo: boy,
+      photo: abhishek,
       name: "Abhishek AP",
       year: "2022-2026",
       dept: "MEMS",
@@ -25,7 +27,7 @@ function Developers() {
       git: "https://google.com",
     },
     {
-      photo: boy,
+      photo: akarshit,
       name: "Akarshit Trivedi",
       year: "2022-2026",
       dept: "MEMS",
@@ -34,7 +36,7 @@ function Developers() {
       git: "https://google.com",
     },
     {
-      photo: boy,
+      photo: sasuke,
       name: "Aditya Sonkhusre",
       year: "2022-2026",
       dept: "MEMS",
