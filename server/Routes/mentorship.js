@@ -95,7 +95,7 @@ router.post("/requestchat", (req, res) => {
     to: mentorId.email,
     subject: "Request for chat by a User",
     text: "Hi, I am an Alumni Portal User I would like to chat with you regarding the future oppertunities",
-    html: `<h2>Hi, I am an Alumni Portal User</h2><p>I would like to chat with you regarding the future oppertunities</p><a href="http://localhost:8000/mentorship/acceptorreject">Accept Request</a>`,
+    html: `<h2>Hi, I am an Alumni Portal User</h2><p>I would like to chat with you regarding the future oppertunities</p><a href="http://localhost:8000/mentorship/chatWithMentor">Accept Request</a>`,
   };
 
   const SendMail = async (transporter, mailOptions) => {
@@ -122,7 +122,7 @@ router.post("/getallrequests", (req, res) => {
 router.post("/requestaccepted", (req, res) => {
   const data = req.body;
   // console.log(data.data.mentorId);
-  ChatRequestsAccepted.findOne({ menteeId: data.data.menteeId }).then((e) => {
+  ChatRequestsAccepted.findOne({ mentorId: data.data.mentorId }).then((e) => {
     if (e) {
       // done();
     } else {
@@ -228,6 +228,23 @@ router.post("/terminatechat", (req, res) => {
   }).then((e) => {});
   console.log(req.body);
   res.json({ msg: "Chat Terminated" });
+
+  const mailOptions = {
+    from: {
+      name: "Alumni Portal",
+      address: "mems220005001@iiti.ac.in",
+    },
+    to: menteeData.email,
+    subject: "Chat Terminated",
+    text: "Hi, Your chat with mentor has been terminated by the mentor",
+    html: `<h3>Hi</h3><p>Your chat with mentor has been terminated by the mentor</p>`,
+  };
+
+  const SendMail = async (transporter, mailOptions) => {
+    await transporter.sendMail(mailOptions);
+    console.log("Email has been sent");
+  };
+  SendMail(transporter, mailOptions);
 });
 
 router.post("/addjob", (req, res) => {

@@ -2,8 +2,11 @@ import { React, useEffect } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+import Header from "./header";
+import Footer from "./footer";
 
 function AcceptOrReject(props) {
+  console.log(props);
   const handleAcceptChat = async () => {
     Cookies.set("currentChat", props.menteeId);
     const res = await axios

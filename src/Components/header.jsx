@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 function Header() {
   const [toggle, setToggle] = useState(true);
   useEffect(() => {
+    // console.log(window.screen.width);
     if (window.screen.width <= 768) {
       setToggle(false);
     }
